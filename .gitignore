@@ -1,0 +1,14 @@
+wandb
+runs
+models
+__pycache__
+.DS_Store
+.vscode
+logs/
+
+Consistent_Exps/CartPole-v1/CartpoleCode/Cartpole_RPI/Cartpole_DQN_RPI/logs_old
+Consistent_Exps/CartPole-v1/CartpoleCode/Cartpole_RPI/Cartpole_DQN_RPI/results_old
+Cartpole-Outer
+
+*_checkpoint
+tensorboard_logs_cartpole
