@@ -225,8 +225,8 @@ def main():
         run_name = f"{args.penalty_function}{dyn}_seed_{args.seed}"
     
     elif args.exp_type == 'env-config':
-        folder_path = f"./results/env-config/{args.algo}/g_{env_config["gravity"]}_mc_{env_config["masscart"]}_mp_{env_config['masspole']}_l_{env_config['length']}/{args.algo}/seed_{args.seed}"
-        run_name = f"{args.algo}_g_{env_config["gravity"]}_mc_{env_config["masscart"]}_mp_{env_config['masspole']}_l_{env_config['length']}_seed_{args.seed}"
+        folder_path = f"./results/env-config/{args.algo}/g_{env_config['gravity']}_mc_{env_config['masscart']}_mp_{env_config['masspole']}_l_{env_config['length']}/{args.algo}/seed_{args.seed}"
+        run_name = f"{args.algo}_g_{env_config['gravity']}_mc_{env_config['masscart']}_mp_{env_config['masspole']}_l_{env_config['length']}_seed_{args.seed}"
     
     else:
         raise ValueError(f"Unknown experiment type: {args.exp_type}")
