@@ -22,8 +22,14 @@ from matplotlib.lines import Line2D
 
 # --- Input/Output Settings ---
 RESULTS_DIR = './results/net-arch/'
-OUTPUT_FILENAME = 'performance_comparison_cartpole_styled-FINAL-FINAL.png'
-OUTPUT_FILENAME_PDF = 'performance_comparison_cartpole_styled_SMALL.pdf'
+OUTPUT_DIR = os.path.join('plots', 'ICC', 'Cartpole', 'net-arch')
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+OUTPUT_FILENAME = os.path.join(
+    OUTPUT_DIR, 'performance_comparison_cartpole_styled-FINAL-FINAL.png'
+)
+OUTPUT_FILENAME_PDF = os.path.join(
+    OUTPUT_DIR, 'performance_comparison_cartpole_styled_SMALL.pdf'
+)
 
 # --- Experiment Settings ---
 ALGORITHMS = ['DoubleDQN', 'PPO', 'RPI', 'DQN']
@@ -317,11 +323,11 @@ def generate_table_data(arch_dirs):
     print("\n--- Results Table (CartPole) ---")
     print(df.to_string())
 
-    csv_filename = 'results_summary_cartpole.csv'
+    csv_filename = os.path.join(OUTPUT_DIR, 'results_summary_cartpole.csv')
     df.to_csv(csv_filename)
     print(f"\nTable saved to {csv_filename}")
 
-    latex_filename = 'results_summary_cartpole.tex'
+    latex_filename = os.path.join(OUTPUT_DIR, 'results_summary_cartpole.tex')
     df.to_latex(latex_filename, longtable=False)
     print(f"Table saved to {latex_filename}")
 

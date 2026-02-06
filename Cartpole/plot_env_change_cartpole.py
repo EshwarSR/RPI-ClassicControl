@@ -25,8 +25,14 @@ from matplotlib.lines import Line2D
 
 # --- Input/Output Settings ---
 BASE_RESULTS_PATH = './results/env-config'
-OUTPUT_FILENAME = 'env_change_performance_comparison_all_algorithms_cartpole-GENERAL.png'
-OUTPUT_FILENAME_PDF = 'env_change_performance_comparison_all_algorithms_cartpole-GENERAL.pdf'
+OUTPUT_DIR = os.path.join('plots', 'ICC', 'Cartpole', 'env-change')
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+OUTPUT_FILENAME = os.path.join(
+    OUTPUT_DIR, 'env_change_performance_comparison_all_algorithms_cartpole-GENERAL.png'
+)
+OUTPUT_FILENAME_PDF = os.path.join(
+    OUTPUT_DIR, 'env_change_performance_comparison_all_algorithms_cartpole-GENERAL.pdf'
+)
 
 # --- Algorithm Settings ---
 ALGORITHMS = {
@@ -325,11 +331,15 @@ def generate_table_data():
     print('\n--- Results Table ---')
     print(df.to_string(index=False))
 
-    csv_filename = 'env_change_results_summary_all_algorithms_cartpole-GENERAL.csv'
+    csv_filename = os.path.join(
+        OUTPUT_DIR, 'env_change_results_summary_all_algorithms_cartpole-GENERAL.csv'
+    )
     df.to_csv(csv_filename, index=False)
     print(f"\nTable saved to {csv_filename}")
 
-    latex_filename = 'env_change_results_summary_all_algorithms_cartpole-GENERAL.tex'
+    latex_filename = os.path.join(
+        OUTPUT_DIR, 'env_change_results_summary_all_algorithms_cartpole-GENERAL.tex'
+    )
     df.to_latex(latex_filename, index=False, longtable=False)
     print(f"Table saved to {latex_filename}")
 

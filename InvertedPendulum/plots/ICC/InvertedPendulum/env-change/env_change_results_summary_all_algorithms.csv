@@ -1,0 +1,25 @@
+Algorithm,Parameter,Condition,Final Performance,AUC
+RPI$_{\mathrm{DDPG}}$,Gravity,Doubled,92.70 ± 11.76,9134386 ± 403777
+RPI$_{\mathrm{DDPG}}$,Gravity,Halved,94.94 ± 8.27,9090525 ± 253955
+RPI$_{\mathrm{DDPG}}$,Cart Mass,Doubled,89.59 ± 16.23,9085522 ± 445883
+RPI$_{\mathrm{DDPG}}$,Cart Mass,Halved,97.65 ± 4.78,9357158 ± 69524
+RPI$_{\mathrm{DDPG}}$,Pole Mass,Doubled,88.91 ± 24.50,9071835 ± 203493
+RPI$_{\mathrm{DDPG}}$,Pole Mass,Halved,99.80 ± 0.30,9120053 ± 283165
+DDPG,Gravity,Doubled,99.71 ± 0.86,9336630 ± 285218
+DDPG,Gravity,Halved,100.00 ± 0.00,8993065 ± 194352
+DDPG,Cart Mass,Doubled,99.55 ± 1.32,9212139 ± 214085
+DDPG,Cart Mass,Halved,99.08 ± 1.48,9217875 ± 193459
+DDPG,Pole Mass,Doubled,99.43 ± 1.21,9370264 ± 154823
+DDPG,Pole Mass,Halved,97.93 ± 6.15,8935593 ± 184113
+TD3,Gravity,Doubled,100.00 ± 0.00,8963329 ± 195070
+TD3,Gravity,Halved,97.96 ± 6.12,8413644 ± 477400
+TD3,Cart Mass,Doubled,100.00 ± 0.00,8535447 ± 183030
+TD3,Cart Mass,Halved,100.00 ± 0.00,8666342 ± 326401
+TD3,Pole Mass,Doubled,93.93 ± 18.19,8816400 ± 221576
+TD3,Pole Mass,Halved,100.00 ± 0.00,8546580 ± 197358
+PPO,Gravity,Doubled,89.29 ± 17.92,8294703 ± 412369
+PPO,Gravity,Halved,92.15 ± 15.83,7873773 ± 583180
+PPO,Cart Mass,Doubled,84.56 ± 22.27,7975849 ± 698486
+PPO,Cart Mass,Halved,74.81 ± 21.54,7846590 ± 752754
+PPO,Pole Mass,Doubled,91.66 ± 6.15,8310745 ± 485110
+PPO,Pole Mass,Halved,88.85 ± 16.79,7569176 ± 539953
